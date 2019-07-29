@@ -6,7 +6,10 @@ namespace Complex
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var z = new Complex();
+            z.Re(4);
+            z.Im(3);
+            Console.WriteLine($"|z| = {z.Abs()}");
         }
     }
 }
