@@ -6,7 +6,7 @@ namespace Complex
     {
         static void Main(string[] args)
         {
-            var z = new Complex();
+            Complex z = new Complex();
             z.Re(4);
             z.Im(3);
             Console.WriteLine($"|z| = {z.Abs()}");
