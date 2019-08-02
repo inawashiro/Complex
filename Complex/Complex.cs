@@ -2,38 +2,49 @@
 
 namespace Complex
 {
-    public class Complex
+    interface IComplex
     {
-        //private double re;
-        //private double im;
+        //properties
+        double Re { get; }
+        double Im { get; }
+        double Abs { get; }
+        double Arg { get; }
+    }
 
-        ////property
-        //public double Re
-        //{
-        //    set { this.re = value; }
-        //    get { return this.re; }
-        //}
+    public class Cartesian : IComplex
+    {
+        private double re;
+        private double im;
 
-        ////property
-        //public double Im
-        //{
-        //    set { this.im = value; }
-        //    get { return this.im; }
-        //}
+        //property
+        public double Re
+        {
+            set { this.re = value; }
+            get { return this.re; }
+        }
 
-        ////property
-        //public double Abs
-        //{
-        //    get { return Math.Sqrt(this.re * this.re + this.im * this.im); }
-        //}
+        //property
+        public double Im
+        {
+            set { this.im = value; }
+            get { return this.im; }
+        }
 
-        ////property
-        //public double Arg
-        //{
-        //    get { return Math.Atan2(this.im, this.re); }
-        //}
+        //property
+        public double Abs
+        {
+            get { return Math.Sqrt(this.re * this.re + this.im * this.im); } 
+        }
 
+        //property
+        public double Arg
+        {
+            get { return Math.Atan2(this.im, this.re); }
+        }
+    }
 
+    public class Polar : IComplex
+    {
         private double abs;
         private double arg;
 
@@ -64,12 +75,14 @@ namespace Complex
         //property
         public double Abs
         {
+            set { this.abs = value; }
             get { return this.abs; }
         }
 
         //property
         public double Arg
         {
+            set { this.arg = value; }
             get { return this.arg; }
         }
     }
