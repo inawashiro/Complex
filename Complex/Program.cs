@@ -6,8 +6,8 @@ namespace Complex
     {
         static void Main(string[] args)
         {
-            Cartesian z = new Cartesian(4, 3);
-            //Polar z = new Polar(4, 3);
+            //Cartesian z = new Cartesian(4, 3);
+            Polar z = new Polar(4, 3);
             Output(z);
         }
 
