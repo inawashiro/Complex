@@ -6,10 +6,10 @@ namespace Complex
     {
         static void Main(string[] args)
         {
-            var z1 = new Cartesian(5, 12);
-            var z2 = new Cartesian(2, 8);
-            //var z1 = new Polar(5, 12);
-            //var z2 = new Polar(2, 8);
+            //var z1 = new Cartesian(5, 12);
+            //var z2 = new Cartesian(2, 8);
+            var z1 = new Polar(5, 12);
+            var z2 = new Polar(2, 8);
             z1 *= z2;
             z1 /= z2;
             Output(z1);
