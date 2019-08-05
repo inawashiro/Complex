@@ -39,6 +39,11 @@ namespace Complex
         {
             get { return Math.Atan2(this.im, this.re); }
         }
+
+        public static Cartesian operator +(Cartesian z1, Cartesian z2)
+        {
+            return new Cartesian(z1.re + z2.re, z1.im + z2.im);
+        }
     }
 
     public class Polar : IComplex
@@ -89,6 +94,14 @@ namespace Complex
         {
             set { this.arg = value; }
             get { return this.arg; }
+        }
+
+        public static Polar operator +(Polar z1, Polar z2)
+        {
+            return new Polar(z1.abs * Math.Cos(z1.arg)
+                             + z2.abs * Math.Cos(z2.arg),
+                             z1.abs * Math.Sin(z1.arg)
+                             + z2.abs * Math.Sin(z2.arg));
         }
     }
 }
