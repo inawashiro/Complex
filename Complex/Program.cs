@@ -6,9 +6,11 @@ namespace Complex
     {
         static void Main(string[] args)
         {
-            //Cartesian z = new Cartesian(4, 3);
-            Polar z = new Polar(4, 3);
-            Output(z);
+            //Cartesian z1 = new Cartesian(4, 3);
+            //Cartesian z2 = new Cartesian(1, 9);
+            Polar z1 = new Polar(4, 3);
+            Polar z2 = new Polar(1, 9);
+            Output(z1 + z2);
         }
 
         static void Output(IComplex z)
